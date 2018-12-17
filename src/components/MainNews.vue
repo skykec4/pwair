@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <div>{{this.$store.state.newsList}}</div> -->
+    <div>{{this.$store.state.newsList}}</div>
   </div>
 </template>
 

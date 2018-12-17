@@ -1,23 +1,40 @@
 <template>
-  <button @click="login">login</button>
+  <div>
+    <form>
+      <div>
+        <label for="email">email :</label>
+        <input id="email" type="text" v-model="email">
+      </div>
+      <div>
+        <label for="password">password :</label>
+        <input id="password" type="current-password" v-model="password">
+      </div>
+
+      <button v-on:click.prevent="signInWithFirebase">login</button>
+    </form>
+  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      emali: "",
-      password: ""
+      email: "test@test.com",
+      password: "123123"
     };
   },
   methods: {
-    login() {
-      // https://firebase.google.com/docs/auth/web/password-auth?hl=ko
+    signInWithFirebase() {
       firebase
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
-        .then()
-        .catch();
+        .then(response => {
+          this.$router.push("/main");
+        })
+        .catch(error => {
+          console.error(error);
+          throw new Error(error);
+        });
     }
   }
 };

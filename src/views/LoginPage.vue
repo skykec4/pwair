@@ -1,37 +1,17 @@
 <template>
   <div>
-    <form>
-      <label for="email">email :</label>
-      <input id="email" type="text" v-model="email">
-      <label for="password">password :</label>
-      <input id="password" type="password" v-model="password">
-      <button v-on:click.prevent="signInWithFirebase">login</button>
-    </form>
+    <Firebase-Login></Firebase-Login>
   </div>
 </template>
 
 <script>
+import FirebaseLogin from "../components/FirebaseLogin.vue";
+
 export default {
-  data() {
-    return {
-      email: "",
-      password: ""
-    };
+  components: {
+    FirebaseLogin
   },
-  methods: {
-    signInWithFirebase() {
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(this.email, this.password)
-        .then(response => {
-          this.$router.push("/main");
-        })
-        .catch(error => {
-          console.error(error);
-          throw new Error(error);
-        });
-    }
-  }
+  methods: {}
 };
 </script>
 

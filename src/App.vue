@@ -1,9 +1,27 @@
 <template>
-  <router-view></router-view>
+  <v-app>
+    <router-view></router-view>
+  </v-app>
 </template>
 
 <script>
-export default {};
+import WebFontLoader from "webfontloader";
+
+export default {
+  mounted() {
+    WebFontLoader.load({
+      google: {
+        families: ["Roboto:100,300,400,500,700,900"]
+      },
+      active: this.setFontLoaded
+    });
+  },
+  methods: {
+    setFontLoaded() {
+      this.$emit("font-loaded");
+    }
+  }
+};
 </script>
 
 <style>
