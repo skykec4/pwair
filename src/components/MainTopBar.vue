@@ -17,16 +17,6 @@
       </v-menu>
       <v-toolbar-title>{{this.toolbarTitle}}</v-toolbar-title>
     </v-toolbar>
-
-    <!--  -->
-    <!--  -->
-    <!-- <div>
-      <span>Top Bar</span>
-    </div>-->
-    <!-- <div>
-      <router-link to="/main/SubProduct">SubProduct</router-link>
-      <router-link to="/main/news">news</router-link>
-    </div>-->
   </header>
 </template>
 
@@ -44,11 +34,7 @@ export default {
   },
   methods: {
     click(item) {
-      console.log("click", item);
       this.toolbarTitle = item;
-    },
-    title(item) {
-      return item;
     }
   }
 };
