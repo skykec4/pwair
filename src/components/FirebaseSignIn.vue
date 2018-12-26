@@ -41,7 +41,7 @@ export default {
           .createUserWithEmailAndPassword(this.email, this.password)
           .then(res => {
             alert("가입을 축하합니다~");
-            this.$router.push("/login");
+            this.$router.push("/");
           })
           .catch(function(error) {
             console.log("error", error.code);

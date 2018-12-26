@@ -16,6 +16,8 @@
         </v-list>
       </v-menu>
       <v-toolbar-title>{{this.toolbarTitle}}</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn flat @click="logout">Logout</v-btn>
     </v-toolbar>
   </header>
 </template>
@@ -36,6 +38,18 @@ export default {
   methods: {
     click(item) {
       this.toolbarTitle = item;
+    },
+    logout() {
+      firebase
+        .auth()
+        .signOut()
+        .then(res => {
+          alert("로그아웃 되었습니다.");
+          this.$router.push("/login");
+        })
+        .catch(err => {
+          console.log("로그아웃 error", err);
+        });
     }
   }
 };
