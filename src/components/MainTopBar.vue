@@ -27,7 +27,8 @@ export default {
       items: [
         { title: "Main", URI: "/main/MainProduct" },
         { title: "Sub", URI: "/main/SubProduct" },
-        { title: "News", URI: "/main/news" }
+        { title: "News", URI: "/main/news" },
+        { title: "firebase", URI: "/main/firebase" }
       ],
       toolbarTitle: "" || "Main"
     };

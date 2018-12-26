@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      newsList: []
+      //newsList: []
     };
   },
   created() {
@@ -40,9 +40,7 @@ export default {
     //     console.log("err : ", err);
     //   });
   },
-  mounted() {
-    console.log(this.$store.state.newsList);
-  }
+  mounted() {}
 };
 </script>
 

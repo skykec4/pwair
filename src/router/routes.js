@@ -8,6 +8,10 @@ export default [
     component: () => import("../views/LoginPage.vue")
   },
   {
+    path: "/SignIn",
+    component: () => import("../components/FirebaseSignIn.vue")
+  },
+  {
     path: "/main",
     component: () => import("../views/MainPage.vue"),
     children: [
@@ -22,6 +26,20 @@ export default [
       {
         path: "news",
         component: () => import("../components/MainNews.vue")
+      },
+      {
+        path: "firebase",
+        component: () => import("../components/FirebaseMenu.vue"),
+        children: [
+          {
+            path: "inputUser",
+            component: () => import("../components/FirebaseInputUserId.vue")
+          },
+          {
+            path: "getData",
+            component: () => import("../components/FirebaseGetdata.vue")
+          }
+        ]
       }
     ]
   }

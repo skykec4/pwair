@@ -26,8 +26,7 @@ const getWeatherList = () => {
   URI = URI + "&pageNo=" + "1";
   URI = URI + "&_type=" + "json";
 
-  URI =
-    "http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData?ServiceKey=66tRqA5RO8ZA1vBsaBFxzBhDP9mUCNF7M2WrgtSUgC2T%2BzniQYqcQ1gxRGy9ltMozYaU3f1hMfyxhWahpD5WNg%3D%3D&base_date=20181219&base_time=0500&nx=60&ny=122&numOfRows=10&pageNo=1&_type=json";
+  //URI =    "http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData?ServiceKey=66tRqA5RO8ZA1vBsaBFxzBhDP9mUCNF7M2WrgtSUgC2T%2BzniQYqcQ1gxRGy9ltMozYaU3f1hMfyxhWahpD5WNg%3D%3D&base_date=20181219&base_time=0500&nx=60&ny=122&numOfRows=10&pageNo=1&_type=json";
 
   //axios.get(url, { crossdomain: true });
   return axios.get(URI, {
