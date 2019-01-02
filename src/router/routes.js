@@ -40,6 +40,16 @@ export default [
             component: () => import("../components/FirebaseGetdata.vue")
           }
         ]
+      },
+      {
+        path: "Sample",
+        component: () => import("../views/SamplePage.vue"),
+        children: [
+          {
+            path: "DragAndDrop",
+            component: () => import("../components/DragAndDropSample.vue")
+          }
+        ]
       }
     ]
   }

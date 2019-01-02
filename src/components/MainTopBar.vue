@@ -30,7 +30,8 @@ export default {
         { title: "Main", URI: "/main/MainProduct" },
         { title: "Sub", URI: "/main/SubProduct" },
         { title: "News", URI: "/main/news" },
-        { title: "firebase", URI: "/main/firebase" }
+        { title: "firebase", URI: "/main/firebase" },
+        { title: "Sample", URI: "/main/Sample" }
       ],
       toolbarTitle: "" || "Main"
     };
