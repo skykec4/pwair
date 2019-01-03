@@ -7,6 +7,9 @@
             <v-chip>
               <router-link to="/main/Sample/DragAndDrop">DragAndDrop</router-link>
             </v-chip>
+            <v-chip>
+              <router-link to="/main/Sample/Card">Card</router-link>
+            </v-chip>
           </div>
         </v-flex>
       </v-layout>
@@ -21,5 +24,5 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 </style>

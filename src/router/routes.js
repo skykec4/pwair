@@ -48,6 +48,10 @@ export default [
           {
             path: "DragAndDrop",
             component: () => import("../components/DragAndDropSample.vue")
+          },
+          {
+            path: "Card",
+            component: () => import("../components/CardSmaple.vue")
           }
         ]
       }
